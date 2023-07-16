@@ -6,7 +6,7 @@ let id = window.location.search
 let ful_id = id.substring(1)
 
 const getData = async()=>{
-    let data = await fetch(`http://gateway.marvel.com/v1/public/characters/${ful_id}?ts=${1}&apikey=${public_key}&hash=${hashValue}`)
+    let data = await fetch(`https://gateway.marvel.com/v1/public/characters/${ful_id}?ts=${1}&apikey=${public_key}&hash=${hashValue}`)
     let json_data = await data.json()
     let result = json_data.data
     let itm = result.results[0]
