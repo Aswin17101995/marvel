@@ -47,7 +47,7 @@ async function handleSearch (e){
         let ele = document.getElementById('result_box')
         ele.style.display="none"
     }else{
-        let data = await fetch(`http://gateway.marvel.com/v1/public/characters?nameStartsWith=${val}&orderBy=name&ts=${1}&apikey=${public_key}&hash=${hashValue}`)
+        let data = await fetch(`https://gateway.marvel.com/v1/public/characters?nameStartsWith=${val}&orderBy=name&ts=${1}&apikey=${public_key}&hash=${hashValue}`)
         let json_data = await data.json()
         let result = json_data.data.results
         let ele = document.getElementById('result_box')
