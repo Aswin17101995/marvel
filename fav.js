@@ -22,7 +22,7 @@ let ele = document.getElementById("result_box")
 if(fav.length > 0){
     
     fav.forEach(async(itm)=>{
-       let data = await fetch(`http://gateway.marvel.com/v1/public/characters/${itm}?ts=${1}&apikey=${public_key}&hash=${hashValue}`)
+       let data = await fetch(`https://gateway.marvel.com/v1/public/characters/${itm}?ts=${1}&apikey=${public_key}&hash=${hashValue}`)
         let json_data = await data.json()
         let x = json_data.data.results[0]
         let div = document.createElement('div')
